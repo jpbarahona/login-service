@@ -60,3 +60,21 @@ Para utilizar el sevicio de gmail, con el siguiente link
 ```
 /oauth/google
 ```
+
+## Login Normal
+
+El servicio de autenticación normal, es en el siguiente endpoint. 
+
+```
+/authentication
+```
+
+**Body autenticación**
+
+```
+{
+	"strategy": "local",
+	"loginuser": "usernameK",
+	"password": "hola"
+}
+```
