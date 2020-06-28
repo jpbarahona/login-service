@@ -1,0 +1,45 @@
+{
+  "host": "HOST",
+  "port": "PORT",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "GxsjH5ZCMhN5y3SJLDBwmAnrLPc=",
+    "authStrategies": [
+      "jwt",
+      "local",
+      "google"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "localhost",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "loginuser",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "redirect": "OAUTH_REDIRECT",
+      "google": {
+        "key": "1042037602428-0s44i9onffjrvo47ldl12f9tgf1nehon.apps.googleusercontent.com",
+        "secret": "7fQcZW_MaJKDdFwbioQXGllK",
+        "scope": [
+          "email",
+          "profile",
+          "openid"
+        ]
+      }
+    }
+  },
+  "postgres": "POSTGRES"
+}
